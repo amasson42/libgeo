@@ -6,7 +6,7 @@
 /*   By: amasson <amasson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/01 16:11:09 by amasson           #+#    #+#             */
-/*   Updated: 2017/11/12 22:42:05 by arthur           ###   ########.fr       */
+/*   Updated: 2017/11/13 10:50:20 by amasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ float			geo_plan_outdistance(t_plan pl, t_point p);
 typedef struct	s_matrix4x4 {
 	float		m[16];
 }				t_matrix4x4;
+
+float			geo_matrix_value_at(t_matrix4x4 m, int l, int c);
 
 t_matrix4x4		geo_matrix_zero(void);
 t_matrix4x4		geo_matrix_identity(void);
