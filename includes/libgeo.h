@@ -111,8 +111,8 @@ t_matrix4x4		geo_matrix_rotaxe(t_vector v, float alpha);
 t_matrix4x4		geo_matrix_projection(float fov, float aspect,
 										float near, float far);
 
-t_matrix4x4		geo_matrix_inverse(t_matrix4x4 m); // not yet
-t_matrix4x4		geo_matrix_transpose(t_matrix4x4 m); // not yet
+t_matrix4x4		geo_matrix_inverse(t_matrix4x4 m);
+t_matrix4x4		geo_matrix_transpose(t_matrix4x4 m);
 
 t_point			geo_matrix_transform_point(t_matrix4x4 m, t_point p);
 t_vector		geo_matrix_transform_vector(t_matrix4x4 m, t_vector v);
