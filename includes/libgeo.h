@@ -6,7 +6,7 @@
 /*   By: amasson <amasson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/01 16:11:09 by amasson           #+#    #+#             */
-/*   Updated: 2017/11/13 10:50:20 by amasson          ###   ########.fr       */
+/*   Updated: 2017/11/14 15:46:46 by arthur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,8 @@ float			geo_matrix_value_at(t_matrix4x4 m, int l, int c);
 
 t_matrix4x4		geo_matrix_zero(void);
 t_matrix4x4		geo_matrix_identity(void);
+t_matrix4x4		geo_matrix_axe_offset(t_vector axes[3], t_point offset);
+
 t_matrix4x4		geo_matrix_translation(t_vector v);
 t_matrix4x4		geo_matrix_scale(t_vector s);
 t_matrix4x4		geo_matrix_rotx(float alpha);
