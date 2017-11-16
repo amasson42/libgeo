@@ -6,7 +6,7 @@
 /*   By: amasson <amasson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 10:47:44 by amasson           #+#    #+#             */
-/*   Updated: 2017/11/13 10:48:20 by amasson          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:00:35 by amasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ t_matrix4x4	geo_matrix_rotx(float alpha)
 	s = sin(alpha);
 	return ((t_matrix4x4) {
 		{1, 0, 0, 0,
-		0, c, -s, 0,
-		0, s, c, 0,
+		0, c, s, 0,
+		0, -s, c, 0,
 		0, 0, 0, 1}
 	});
 }

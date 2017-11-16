@@ -6,7 +6,7 @@
 /*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 13:28:47 by arthur            #+#    #+#             */
-/*   Updated: 2017/11/14 16:07:39 by arthur           ###   ########.fr       */
+/*   Updated: 2017/11/16 12:07:25 by amasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 static t_matrix4x4	hard_inverse(t_matrix4x4 m)
 {
+	(void)m;
 	return (geo_matrix_identity());
 }
 
 static uint8_t		inverse_repere(t_matrix4x4 *m, t_vector d[3])
 {
-	float 		t;
+	float t;
 
 	t = m->m[0] * (m->m[5] * m->m[10] - m->m[9] * m->m[6])
 		- m->m[4] * (m->m[1] * m->m[10] - m->m[9] * m->m[2])
