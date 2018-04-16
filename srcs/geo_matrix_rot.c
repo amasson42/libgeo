@@ -21,8 +21,8 @@ t_matrix4x4	geo_matrix_rotx(float alpha)
 	s = sin(alpha);
 	return ((t_matrix4x4) {
 		{1, 0, 0, 0,
-		0, c, -s, 0,
-		0, s, c, 0,
+		0, c, s, 0,
+		0, -s, c, 0,
 		0, 0, 0, 1}
 	});
 }
