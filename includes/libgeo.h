@@ -6,7 +6,7 @@
 /*   By: amasson <amasson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/01 16:11:09 by amasson           #+#    #+#             */
-/*   Updated: 2017/11/13 10:50:20 by amasson          ###   ########.fr       */
+/*   Updated: 2017/11/16 12:06:36 by amasson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,12 @@ float			geo_matrix_value_at(t_matrix4x4 m, int l, int c);
 
 t_matrix4x4		geo_matrix_zero(void);
 t_matrix4x4		geo_matrix_identity(void);
-t_matrix4x4		geo_matrix_translation(t_vector v);
-t_matrix4x4		geo_matrix_scale(t_vector s);
+t_matrix4x4		geo_matrix_axe_offset(t_vector axes[3], t_point offset);
+
+t_matrix4x4		geo_matrix_translation(float x, float y, float z);
+t_matrix4x4		geo_matrix_translation_vector(t_vector v);
+t_matrix4x4		geo_matrix_scale(float x, float y, float z);
+t_matrix4x4		geo_matrix_scale_vector(t_vector s);
 t_matrix4x4		geo_matrix_rotx(float alpha);
 t_matrix4x4		geo_matrix_roty(float alpha);
 t_matrix4x4		geo_matrix_rotz(float alpha);
@@ -109,8 +113,8 @@ t_matrix4x4		geo_matrix_rotaxe(t_vector v, float alpha);
 t_matrix4x4		geo_matrix_projection(float fov, float aspect,
 										float near, float far);
 
-t_matrix4x4		geo_matrix_inverse(t_matrix4x4 m); // not yet
-t_matrix4x4		geo_matrix_transpose(t_matrix4x4 m); // not yet
+t_matrix4x4		geo_matrix_inverse(t_matrix4x4 m);
+t_matrix4x4		geo_matrix_transpose(t_matrix4x4 m);
 
 t_point			geo_matrix_transform_point(t_matrix4x4 m, t_point p);
 t_vector		geo_matrix_transform_vector(t_matrix4x4 m, t_vector v);
